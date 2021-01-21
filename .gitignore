@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.aux
+.out
+.synctex
+.tex
