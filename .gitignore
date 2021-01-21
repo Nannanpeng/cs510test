@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
-.aux
-.out
-.synctex
-.tex
+*.aux
+*.out
+*.synctex
+*.tex
