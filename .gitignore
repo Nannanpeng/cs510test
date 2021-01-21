@@ -4,6 +4,7 @@
 .Ruserdata
 *.aux
 *.out
-*.synctex
+*.synctex.gz
 *.tex
 *.txt
+*.log
