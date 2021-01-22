@@ -5,9 +5,10 @@ library(ggplot2) #only dataframe
 library(reshape2)
 library(viridis) # color bg
 
+#import dataset
 df <- read.csv("../data/SimulatedData.csv")
 
-# check x1-y relationship
+# check x1-y relationship and save the plot
 p1 <- ggplot(data=df, aes(x=x1,y=y)) + geom_point() + 
         labs(title="Regression analysis", x="Independent var.", y="Dependent var.")
 pdf("../results/xy_relationship.pdf", height = 6, width=6)
@@ -19,11 +20,9 @@ reg <- lm(y~.-1, data=df,)
 summary(reg)
 
 # check residuals and output as eps
-par(mfrow=c(2, 2))
-
+par(mfrow = c(2, 2))
 setEPS()
 plot(reg)
 postscript("../results/ResultsDiagnosis.eps")
 dev.off()
-
-par(mfrow=c(1,1))
+par(mfrow = c(1,1))
